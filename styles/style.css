@@ -20,15 +20,14 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-} 
-
+  justify-content: center;
+}
 
 .header {
-  display:flex;
-  padding:clamp(6.438rem, 0.25vw + 6.388rem, 6.688rem) 0 ;
+  display: flex;
+  padding: clamp(6.438rem, 0.25vw + 6.388rem, 6.688rem) 0;
   align-self: center;
-} 
+}
 
 .header-tittle-group {
   display: flex;
@@ -38,15 +37,13 @@
   color: var(--main-text-color);
   background-color: var(--background-color);
   border: var(--border);
-  padding: clamp(3.125rem, 6.964vw + 1.732rem, 8rem); 
+  padding: clamp(3.125rem, 6.964vw + 1.732rem, 8rem);
   align-items: center;
   inline-size: 100%;
-
 }
 
 .header-title {
   font-size: clamp(1.125rem, 0.0907rem + 4.4131vw, 4.0625rem);
- 
 }
 
 .header-subtitle {
@@ -57,34 +54,28 @@
 
 .inline-size {
   inline-size: var(--inline-size-main-desktop);
-} 
+}
 
 @media (width <= 375px) {
-
   .header-tittle-group {
-  padding: 120px 50px;
-
-  
+    padding: 120px 50px;
   }
 
   .header-title {
     font-size: clamp(0.875rem, -11.8523rem + 63.6364vw, 3.0625rem);
-   
   }
-  
+
   .header-subtitle {
     font-size: clamp(0.75rem, 0.0227rem + 3.6364vw, 0.875rem);
- 
   }
-  
+
   .inline-size {
     inline-size: var(--inline-size-main-mobile);
-  } 
-  
+  }
 }
 
 .card {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-self: center;
   padding-block-end: 50px;
@@ -98,7 +89,6 @@
   background-color: var(--background-color);
   border: var(--border);
   padding: 5px 10px 6px 10px;
-  
 }
 
 .text {
@@ -108,15 +98,14 @@
   font-weight: var(--main-text-weight);
   color: var(--main-text-color);
   background-color: var(--background-color);
-
 }
 
 .article-text {
   border: var(--border);
   padding-block-start: 25px;
-    padding-inline-end: 25px;
-    padding-block-end: 26px;
-    padding-inline-start: 25px;
+  padding-inline-end: 25px;
+  padding-block-end: 26px;
+  padding-inline-start: 25px;
   background-color: var(--background-color);
 }
 .article-text-pading {
@@ -136,40 +125,35 @@
 }
 
 @media (width <= 375px) {
-  
-.article-text {
-padding-block-start: 26px;
-padding-inline-end: 29px;
-padding-block-end: 25px;
+  .article-text {
+    padding-block-start: 26px;
+    padding-inline-end: 29px;
+    padding-block-end: 25px;
   }
 
   .article-text-padding {
     padding-block-start: 29px;
   }
 
-.my-text {
+  .my-text {
     padding-block-end: 44px;
   }
 
-.my-text-padding {
-  padding-block-end: 24px;
+  .my-text-padding {
+    padding-block-end: 24px;
+  }
+  .my-text-padding-fixed {
+    padding-block-end: 4px;
+  }
+  .texts-padding {
+    padding-block-start: 29px;
+    padding-inline-end: 28px;
+  }
 
-}
-.my-text-padding-fixed {
-  padding-block-end: 4px;
-}
-.texts-padding {
-  padding-block-start: 29px;
-  padding-inline-end: 28px;
-}
-
-
-.img-container {
-  block-size: 371px;
+  .img-container {
+    block-size: 371px;
   }
 }
-
-
 
 .image {
   inline-size: 100%;
@@ -182,26 +166,26 @@ padding-block-end: 25px;
 
 .img-spiderman {
   filter: blur(0.2rem);
-} 
+}
 .img-piter {
   filter: grayscale(1) contrast(1) brightness(100%);
 }
 .img-homer {
   filter: invert(100%);
-} 
+}
 .img-homerfriends {
   filter: hue-rotate(-90deg);
-} 
+}
 .img-soidet {
   filter: sepia(80%);
-} 
+}
 
 .img-cat {
   filter: grayscale(1);
-} 
+}
 .img-rusalochka {
   filter: saturate(200%);
-} 
+}
 
 .watermark {
   font-size: 14px;
@@ -212,21 +196,19 @@ padding-block-end: 25px;
   position: absolute;
   top: 25px;
   right: 25px;
-  text-shadow:
-    1px 1px 0 var(--shadow-watermark-color),
+  text-shadow: 1px 1px 0 var(--shadow-watermark-color),
     -1px 1px 0 var(--shadow-watermark-color),
     1px -1px 0 var(--shadow-watermark-color),
     -1px -1px 0 var(--shadow-watermark-color);
-    mix-blend-mode: hard-light;
-    opacity: 0.5;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
   z-index: 1;
 }
 
 @supports (
   (text-stroke: 1px var(--shadow-watermark-color)) or
     (-webkit-text-stroke: 1px var(--shadow-watermark-color))
-) 
-{
+) {
   .watermark {
     -webkit-text-stroke: 1px var(--shadow-watermark-color);
     text-stroke: 1px var(--shadow-watermark-color);
@@ -245,7 +227,7 @@ padding-block-end: 25px;
   font-size: 14px;
   font-weight: var(--main-text-weight);
   color: var(--background-color);
-  position:relative;
+  position: relative;
   z-index: 1;
   transition: color 0.5s ease-in-out;
   mix-blend-mode: difference;
@@ -256,46 +238,41 @@ padding-block-end: 25px;
   flex-direction: row;
   justify-content: end;
   gap: 4px;
-  
 }
 
-.button{
+.button {
   position: relative;
-  display:inline-block;
-  overflow: hidden; 
-  z-index:0;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 0;
   transition: background-color 0.3s ease;
   border: 2px solid var(--contour-color);
   background-color: var(--background-color);
-
 }
 .card__like-button {
-  padding:0 17px;
+  padding: 0 17px;
   min-width: 130px;
 }
 
-.button::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:var(--contour-color); 
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--contour-color);
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
- 
-  
 }
-.button:hover::before{
+.button:hover::before {
   transform: translateX(0);
-
 }
 
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--main-text-color);
-  transition:box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .heart-button {
@@ -305,16 +282,16 @@ padding-block-end: 25px;
 .button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--main-text-color);
-  transition:box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .heart-button:focus {
-  outline:none;
+  outline: none;
 }
 
 .heart-button:focus-visible {
-  outline:none;
-  border:2px solid var(--main-text-color);
+  outline: none;
+  border: 2px solid var(--main-text-color);
   transition: border 0.3s ease;
 }
 
@@ -324,8 +301,8 @@ padding-block-end: 25px;
   flex-direction: column;
   align-items: center;
   padding-block-end: 105px;
-
 }
+
 .save-button {
   display: flex;
   flex-direction: row;
@@ -335,8 +312,6 @@ padding-block-end: 25px;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
   padding-block-end: 15px;
- 
-
 }
 
 .flopy {
@@ -346,12 +321,12 @@ padding-block-end: 25px;
   mix-blend-mode: difference;
 }
 
-@media (width <= 375px)  {
+@media (width <= 375px) {
   .save-button {
-   flex-direction: column;
-   align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .flopy {
     inline-size: 28px;
     block-size: 28px;
@@ -380,11 +355,9 @@ dialog::backdrop {
   padding: 12px 133px;
   justify-self: center;
   grid-column: span 2;
- 
 }
 
 .button__text-dialog-open {
   text-transform: uppercase;
   line-height: 150%;
 }
-
