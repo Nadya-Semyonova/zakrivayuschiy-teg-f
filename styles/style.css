@@ -82,9 +82,10 @@
 }
 
 .cards-title {
+  font-family: var(--main-font);
   display: inline-block;
   font-size: 18px;
-  font-weight: var(--title-text-weight);
+  font-variation-settings: "wght" var(--title-text-weight);
   color: var(--main-text-color);
   background-color: var(--background-color);
   border: var(--border);
@@ -95,7 +96,6 @@
   display: inline-block;
   font-family: var(--main-font);
   font-size: 18px;
-  font-weight: var(--main-text-weight);
   color: var(--main-text-color);
   background-color: var(--background-color);
 }
@@ -279,11 +279,7 @@
   background-color: var(--background-color);
   border: transparent;
 }
-.button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 var(--main-text-color);
-  transition: box-shadow 0.3s ease;
-}
+
 
 .heart-button:focus {
   outline: none;
