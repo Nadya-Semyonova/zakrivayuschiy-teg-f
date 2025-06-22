@@ -1,1 +1,20 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --accent-font: "PressStart", monospase;
+  --main-font: "Inter-Variable", monospace;
+  --main-text-weight: 400;
+  --title-text-weight: 700;
+  --font-size-header-mobile: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+  --main-text-color: #000000;
+  --background-color: #ffffff;
+  --background-image: 
+  repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+  repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
+  repeating-linear-gradient(#e7e7e7 0.01%, #1a1a1a 100%);
+  --inline-size-main-mobile: 100%;
+  --inline-size-main-desktop: 48.5%;
+  --shadow-watermark-color: rgba(255, 255, 255, 0.5);
+  --border: 1px solid #000;
+  --contour-color:#000000;
+  --animation-fill-color:#FF0000;
+}

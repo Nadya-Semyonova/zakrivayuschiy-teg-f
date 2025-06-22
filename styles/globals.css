@@ -35,6 +35,8 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  padding: 0;
+  cursor:url(../images/pointer.png) 8 8, pointer;
 }
 
 ul,
