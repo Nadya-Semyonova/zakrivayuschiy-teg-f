@@ -13,7 +13,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--main-text-weight);
   background-attachment: fixed;
   background-image: var(--background-image);
@@ -25,14 +25,14 @@
 
 .header {
   display: flex;
-  padding: clamp(6.438rem, 0.25vw + 6.388rem, 6.688rem) 0;
+  padding: clamp(6.25rem, 0.129vw + 6.22rem, 6.375rem) 0;
   align-self: center;
 }
 
 .header-tittle-group {
   display: flex;
   flex-direction: column;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   font-weight: var(--main-text-weight);
   color: var(--main-text-color);
   background-color: var(--background-color);
@@ -82,7 +82,6 @@
 }
 
 .cards-title {
-  font-family: var(--main-font);
   display: inline-block;
   font-size: 18px;
   font-variation-settings: "wght" var(--title-text-weight);
@@ -92,22 +91,21 @@
   padding: 5px 10px 6px 10px;
 }
 
-.text {
-  display: inline-block;
-  font-family: var(--main-font);
-  font-size: 18px;
-  color: var(--main-text-color);
-  background-color: var(--background-color);
-}
-
 .article-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  background-color: var(--background-color);
   border: var(--border);
   padding-block-start: 25px;
   padding-inline-end: 25px;
   padding-block-end: 26px;
   padding-inline-start: 25px;
-  background-color: var(--background-color);
+  line-height: 21px;
 }
+
 .article-text-pading {
   padding-inline-end: 22px;
 }
@@ -118,6 +116,8 @@
   padding-block-end: 25px;
 }
 .img-container {
+  border-inline-start: var(--border);
+  border-inline-end: var(--border);
   inline-size: 100%;
   block-size: 696px;
   position: relative;
@@ -158,6 +158,8 @@
 .image {
   inline-size: 100%;
   block-size: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .img-mermaid {
@@ -191,7 +193,7 @@
   font-size: 14px;
   text-transform: uppercase;
   font-weight: var(--main-text-weight);
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   color: var(--main-text-color);
   position: absolute;
   top: 25px;
@@ -223,7 +225,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), monospace;
   font-size: 14px;
   font-weight: var(--main-text-weight);
   color: var(--background-color);
@@ -237,7 +239,8 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  gap: 4px;
+  align-items: center;
+  gap: 5px;
 }
 
 .button {
@@ -245,12 +248,13 @@
   display: inline-block;
   overflow: hidden;
   z-index: 0;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in-out;
   border: 2px solid var(--contour-color);
   background-color: var(--background-color);
 }
 .card__like-button {
-  padding: 0 17px;
+  padding-block-start: 7px;
+  padding-block-end: 6px;
   min-width: 130px;
 }
 
@@ -277,21 +281,15 @@
 
 .heart-button {
   background-color: var(--background-color);
-  border: transparent;
-}
-
-
-.heart-button:focus {
-  outline: none;
+  border: none;
+  max-height: 34px;
 }
 
 .heart-button:focus-visible {
-  outline: none;
-  border: 2px solid var(--main-text-color);
-  transition: border 0.3s ease;
+  outline: 2px solid var(--main-text-color);
 }
 
-.footer {
+.main {
   display: flex;
   justify-self: center;
   flex-direction: column;
@@ -334,13 +332,17 @@ dialog::backdrop {
   backdrop-filter: blur(1px);
 }
 
+dialog {
+  padding: 0;
+}
+
 .dialog-open {
   display: grid;
   grid-template-columns: 39px 234px;
   column-gap: 20px;
   row-gap: 30px;
-  align-items: end;
-  padding: 10px 9px 10px 10px;
+  align-items: center;
+  padding: 30px;
 }
 .svg-flopy-open {
   inline-size: 39px;
@@ -348,12 +350,26 @@ dialog::backdrop {
 }
 
 .button-ok {
-  padding: 12px 133px;
+  padding: 7px 130.5px;
   justify-self: center;
   grid-column: span 2;
+  text-transform: uppercase;
 }
 
 .button__text-dialog-open {
   text-transform: uppercase;
   line-height: 150%;
+}
+
+@media (width <= 375px) {
+  
+  .dialog-open {
+    padding: 30px 38px;
+    grid-template-columns: 39px 198px;
+    justify-content: center;
+  }
+
+  .button-ok {
+    padding: 7px 112.5px;
+  }
 }
