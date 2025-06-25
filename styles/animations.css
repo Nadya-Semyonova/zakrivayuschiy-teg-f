@@ -15,7 +15,6 @@
 
 .like-icon {
   display: inline-block;
-  cursor: pointer;
 }
 
 .like-icon:hover .core {

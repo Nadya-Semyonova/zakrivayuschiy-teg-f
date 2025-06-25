@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: center;
 }
 
 .header {
@@ -29,10 +29,6 @@
   padding: clamp(6.25rem, 0.129vw + 6.22rem, 6.375rem) 0;
   align-self: center;
   justify-content: center;
-  /* новое ниже */
-  inline-size: 100%;
-  block-size: 100%;
-  flex-wrap: nowrap;
 }
 
 .header-tittle-group {
@@ -43,57 +39,33 @@
   color: var(--main-text-color);
   background-color: var(--background-color);
   border: var(--border);
-  /* padding: clamp(3.125rem, 6.964vw + 1.732rem, 8rem); */
+  padding: clamp(7.5rem, 0.751vw + 7.324rem, 8rem)
+    clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem);
   align-items: center;
-  /* inline-size: 100%;  */
-
-  /* новое */
-  padding: clamp(7.5rem, 0.751vw + 7.324rem, 8rem) clamp(0.875rem, 9.953vw - 1.458rem, 7.5rem);
-  flex-wrap: nowrap;
   gap: 20px;
 }
 
 .header-title {
-  /* font-size: clamp(1.125rem, 0.0907rem + 4.4131vw, 4.0625rem); */
-  /* новое ниже */
-  font-size:clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header-subtitle {
   text-transform: uppercase;
-  /* font-size:clamp(0.875rem, 0.7362rem + 0.5906vw, 1.4375rem); */
-  /* padding-block-start: 20px; */
-  /* новое ниже */
-
-  font-size:clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .inline-size {
-  /* inline-size: var(--inline-size-main-desktop); */
-  /* новое */
-
   inline-size: 100%;
-  max-inline-size: var(--inline-size-main-desktop);
+  max-inline-size: var(--inline-size-main);
 }
 
-/* @media (width <= 375px) {
-  .header-tittle-group {
-    padding: 120px 50px;
-  }
-
-  .header-title {
-    font-size: clamp(0.875rem, -11.8523rem + 63.6364vw, 3.0625rem);
-  }
-
-  .header-subtitle {
-    font-size: clamp(0.75rem, 0.0227rem + 3.6364vw, 0.875rem);
-  }
-
-  .inline-size {
-    inline-size: var(--inline-size-main-mobile);
-  }
-} */
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-block-end: 105px;
+}
 
 .card {
   display: flex;
@@ -109,10 +81,10 @@
   color: var(--main-text-color);
   background-color: var(--background-color);
   border: var(--border);
-  padding-inline-start:8px;
-  padding-inline-end:8px;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
   padding-block-start: 3px;
-  padding-block-end:3px;
+  padding-block-end: 3px;
 }
 
 .article-text {
@@ -132,7 +104,7 @@
 }
 
 .img-container {
-  display:block;
+  display: block;
   border-inline-start: var(--border);
   border-inline-end: var(--border);
   inline-size: 100%;
@@ -142,14 +114,14 @@
 }
 
 @media (width <= 375px) {
-  .cards-title{
-  padding-inline-start:9px;
-  padding-inline-end: 8px;
-  padding-block-start: 4px;
-  padding-block-end:4px;
+  .cards-title {
+    padding-inline-start: 9px;
+    padding-inline-end: 8px;
+    padding-block-start: 4px;
+    padding-block-end: 4px;
   }
 
- .img-container {
+  .img-container {
     block-size: 371px;
   }
 }
@@ -289,14 +261,6 @@
   transition: outline 0.3s ease;
 }
 
-.main {
-  display: flex;
-  justify-self: center;
-  flex-direction: column;
-  align-items: center;
-  padding-block-end: 105px;
-}
-
 .save-button {
   display: flex;
   flex-direction: row;
@@ -362,7 +326,6 @@ dialog {
 }
 
 @media (width <= 375px) {
-  
   .dialog-open {
     padding: 30px 38px;
     grid-template-columns: 39px 198px;
